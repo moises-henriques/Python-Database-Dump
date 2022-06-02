@@ -23,6 +23,8 @@
 ##  - When the script is executed, it will create and dump files to c:\pgDump. The        ##
 ##    configuration file is created under %APPDATA%\postgresql\, if the folder doesn't    ##
 ##    exists, it will be created.                                                         ##                                                                                        ##
+##  - The script must run in a python environment provided with all the dependencies      ##
+##    listed in the import section bellow.                                                ##
 ##                                                                                        ##
 ##  Final observations:                                                                   ##
 ##                                                                                        ##

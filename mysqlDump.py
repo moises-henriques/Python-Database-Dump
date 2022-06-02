@@ -28,6 +28,8 @@
 ##                                                                                        ##
 ##  - The configuration file is overriden after the code execution, so no sensitive data  ##
 ##    will be stored in plain text after the dump process.                                ##
+##  - The script must run in a python environment provided with all the dependencies      ##
+##    listed in the import section bellow.                                                ##
 ##                                                                                        ##
 ##  Any advices or suggestions:                                                           ##
 ##                                                                                        ##
@@ -36,6 +38,7 @@
 ##                                                                                        ##
 ############################################################################################
 
+## Imports ##
 import sys
 import pandas as pd
 import mysql

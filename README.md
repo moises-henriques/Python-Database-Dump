@@ -22,8 +22,9 @@
                                                                                   
 ##  Final observations:                                                              
                                                                                  
-- The configuration file is overriden after the code execution, so no sensitive data will be stored in plain text after the dump process.                           
-- The script must run in a python environment provided with all the dependencies listed in the import section bellow.                                           
+- The configuration file is removed after the code execution, so no sensitive data will be stored in plain text after the dump process.                           
+- The script must run in a python environment provided with all the dependencies listed in the import section bellow.
+- Before first execution the user must set an environment variable for the database password. The name of this variable should be given to the script using the -ev argument.                                           
                                                                                   
 ##  Any advices or suggestions:                                                      
                                                                                   

@@ -145,12 +145,7 @@ def clearPgpass():
     try:
         appdataPath = os.getenv('APPDATA')
         pgPath =appdataPath+'\\postgresql\\pgpass.conf'
-
-        pgpass = open(pgPath,'r+')
-        pgpass.write('')
-        pgpass.truncate()
-        pgpass.close()
-
+        os.remove(pgPath)
         return True
     except:
         return None

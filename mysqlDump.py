@@ -5,7 +5,7 @@
 ##  - No sensitive information, such as passwords are given to command line;              ##
 ##  - No passwords are kept as plain text in the script;                                  ##
 ##  - No passwords or other sentive data are kept as plain text in auxiliary files        ##
-##    (pgpass.conf) after the execution.                                                  ##
+##    (my.cnf) after the execution.                                                       ##
 ##                                                                                        ##
 ## Script calling example:                                                                ##
 ##  - python mysqlDump.py -t -c -h localhost -db DBName -u postgres -ev MySQLDBPass       ##
@@ -142,11 +142,7 @@ def setMycnf(host,user,password,**kwargs):
 ## Clear created pgpass.conf ##
 def clearMycnf():
     try:
-        mycnf = open('my.cnf','r+')
-        mycnf.write('')
-        mycnf.truncate()
-        mycnf.close()
-
+        os.remove('my.cnf')
         return True
     except:
         return None
@@ -203,11 +199,11 @@ def backupDB(host,DBName,user,password,**kwargs):
             else:
                 raise ValueError('ERROR: Invalid mode provided in backupDB function.')
         else:
-            raise RuntimeError('ERROR: We could not Set/Create the pgpass.conf, review the code.')
+            raise RuntimeError('ERROR: We could not Set/Create the my.cnf, review the code.')
         if clearMycnf():
             return True
         else:
-            raise RuntimeError('ERROR: We could not clear the pgpass.conf content, review the code.')
+            raise RuntimeError('ERROR: We could not clear the my.cnf content, review the code.')
     except:
         raise RuntimeError('ERROR: We could not proced with the backup process, review the code.')
 

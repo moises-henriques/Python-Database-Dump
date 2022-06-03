@@ -9,7 +9,7 @@
 ##                                                                                                 ##
 ## Script calling example:                                                                         ##
 ##  - python postgresDump.py -t -h localhost -db DBName -u postgres -ev postgresDBPass             ##
-##  - python postgresDump.py -h localhost -p port -s -sn serverName -u admin -ev postgresDBPass    ##                                                                                    ##
+##  - python postgresDump.py -h localhost -p port -s -sn serverName -u admin -ev postgresDBPass    ##                                                                             
 ## Arguments Explanation:                                                                          ##
 ##                                                                                                 ##
 ##  - (-t): Dump table by table of Database (Optional)                                             ##
@@ -24,7 +24,7 @@
 ##                                                                                                 ##
 ##  - When the script is executed, it will create and dump files to c:\pgDump. The                 ##
 ##    configuration file is created under %APPDATA%\postgresql\, if the folder doesn't             ##
-##    exists, it will be created.                                                                  ##                                                                                        ##
+##    exists, it will be created.                                                                  ##                                                                                   
 ##  - The script must run in a python environment provided with all the dependencies               ##
 ##    listed in the import section bellow.                                                         ##
 ##                                                                                                 ##
